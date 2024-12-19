@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Bluesky Content Injector!!",
+  "name": "Chrome Extension Starter",
   "version": "1.0",
   "description": "Injects content into Bluesky using shadow DOM",
   "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://bsky.app/*"],
+  "host_permissions": ["<all_urls>"],
   "web_accessible_resources": [
     {
       "resources": ["content/content.html", "styles/tailwind.css"],
-      "matches": ["https://bsky.app/*"]
+      "matches": ["<all_urls>"]
     }
   ],
   "background": {
@@ -16,7 +16,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://bsky.app/*"],
+      "matches": ["<all_urls>"],
       "js": ["content/content.js"],
       "css": ["styles/tailwind.css"]
     }
