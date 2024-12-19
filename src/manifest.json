@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chrome Extension Starter",
   "version": "1.0",
-  "description": "Injects content into Bluesky using shadow DOM",
+  "description": "Injects content into any website using shadow DOM",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "web_accessible_resources": [
