@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Bluesky Content Injector!!",
+  "version": "1.0",
+  "description": "Injects content into Bluesky using shadow DOM",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://bsky.app/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["content/content.html", "styles/tailwind.css"],
+      "matches": ["https://bsky.app/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://bsky.app/*"],
+      "js": ["content/content.js"],
+      "css": ["styles/tailwind.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
